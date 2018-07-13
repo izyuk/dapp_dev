@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'Lato-Regular';
+  src: local('Lato-Regular'), ~"url('./static/fonts/Lato-Regular.eot')";
+  src: local('Lato-Regular'), ~"url('/static/fonts/Lato-Regular.woff')" format('woff'),
+  ~"url('./static/fonts/Lato-Regular.ttf')" format('truetype'),
+  ~"url('./static/fonts/Lato-Regular.svg')" format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: local('Lato-Light'), ~"url('/static/fonts/Lato-Light.eot')";
+  src: local('Lato-Light'), ~"url('/static/fonts/Lato-Light.woff')" format('woff'),
+  ~"url('/static/fonts/Lato-Light.ttf')" format('truetype'),
+  ~"url('/static/fonts/Lato-Light.svg')" format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*.fontface(@fontname) {
+  @fonturl: './static/fonts';
+  font-family: @fontname;
+  font-weight: normal;
+  font-style: normal;
+  src: local('@{fontname}') ~"url('@{fonturl}/@{fontname}.otf')";
+  src: local('@{fontname}') ~"url('@{fonturl}/@{fontname}.woff')" format('woff'),
+  ~"url('@{fonturl}/@{fontname}.ttf')" format('truetype'),
+  ~"url('@{fonturl}/@{fontname}.svg')" format('svg');
+}
+
+@l_r: 'Lato-Regular';
+@l_l: 'Lato-Light';
+
+@font-face {
+  .fontface(@l_r);
+}
+
+@font-face {
+  .fontface(@l_l);
+}*/
+
+.font(@sizeValue) {
+  @remValue: (@sizeValue / 16);
+  @pxValue: @sizeValue;
+  font-size: ~"@{pxValue}px";
+  font-size: ~"@{remValue}rem";
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+button,
+fieldset,
+form,
+input,
+label,
+legend,
+textarea,
+select,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+a,
+b,
+i,
+u,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-size: 100%;
+  font-style: normal;
+  font-weight: normal;
+  line-height: inherit;
+  vertical-align: baseline;
+  background: none;
+  white-space: normal;
+}
+
+form {
+  height: inherit;
+}
+
+iframe {
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@w: #fff;
+@regular: 'Lato-Regular';
+@light: 'Lato-Light';
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-family: @regular;
+}
+
+A:link,
+A:active,
+A:hover,
+A:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button, input, select {
+  outline: none;
+  cursor: pointer;
+}
+
+.fb() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont(@max_width:1024px) {
+  width: 100%;
+  max-width: @max_width;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.br(@c:red) {
+  border: 1px solid @c;
+}
+
+.abs(@position:absolute) {
+  position: @position;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1c0e2b), to(#040412));
+  background-image: linear-gradient(to bottom, #1c0e2b, #040412);
+  min-height: 100vh;
+}
